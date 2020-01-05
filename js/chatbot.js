@@ -105,17 +105,6 @@ ChatBot.sendMessage = function () {
     }
 };
 
-$.ajax("/test",{
-    type: "POST",
-    data: {"msg": "hello"},
-    dataType: "json",
-    contentType: "application/json"})
-    .done(function (data) {
-        console.log(data);
-    });
-
-
-
 ChatBot.write = function (message, sender, emoji) {
     //Only boto's messages should be heard
     if (sender == "boto" && ChatBot.speechEnabled) {
